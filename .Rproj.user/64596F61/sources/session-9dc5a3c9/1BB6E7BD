@@ -1,0 +1,28 @@
+{
+    "id": "1BB6E7BD",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1680873424724.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "id": "ac539adef7194fdc99f81c2443fece85",
+        "name": "pain_by_site_abundance",
+        "title": "pain_by_site_abundance",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2974399787600,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1680873424724,
+    "read_only": false,
+    "read_only_alternatives": []
+}

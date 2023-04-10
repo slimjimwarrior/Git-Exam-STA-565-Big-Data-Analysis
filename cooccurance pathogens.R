@@ -1,0 +1,56 @@
+data("beetles")
+
+cooccur_beetles <- cooccur(beetles)
+
+summary(cooccur_beetles)
+plot(cooccur_beetles)
+
+
+#Subset data set to only pathogen occruance within nymphs
+Pathogen_for_occur_analysis_by_individual_nymphs <- Pathogen_data_numeric %>%
+  select(c(`Borrelia burgdorferi sensu lato`,`Borrelia miyamotoi `,
+           `Borrelia mayonii `,`Babesia microti`,`Ehrlichia muris`,`Anaplasma phagocytophilum`,
+           `Deer Tick Virus`)) %>%
+  t()
+
+#subset data to only measure occurance within site (not individuals)
+Pathogen_for_occur_analysis_by_sites <- Pathogen_by_site_with_percentages %>%
+  select(c(total_Borrelia_burgdorferi ,total_Borrelia_miyamotoi,total_Babesia_microti,
+           total_Anaplasma_phagocytophilum,total_Powassan_DTV)) %>%
+  t()
+
+#create objects for for measuring co-occurance of pathogens within seperate dimension
+
+
+#Abundance of pathogens at sites (via #of infected nymphs)
+Pain_by_presence<- Pathogen_for_occur_analysis_by_sites[Pathogen_for_occur_analysis_by_sites > 0] <- 1
+
+#presence/abscence of pathogens within individuals nymphs
+pathogen_occurance_individuals <- cooccur(Pathogen_for_occur_analysis_by_individual_nymphs, spp_names = TRUE)
+
+#presence/abscence of pathogens by sites
+
+pathogen_by_site_presence <- cooccur(Pathogen_for_occur_analysis_by_sites, spp_names =TRUE)
+
+#summar information
+summary(pathogen_occurance_individuals)
+
+summary(pathogen_by_site_presence)
+
+#Co-infection between babesia microti and borrelia burgdorferi is signifigant in co-infection beteween individuals nymphs
+ 
+plot(pain_individuals, plotrand = TRUE)
+
+#Presence of pathogens at the site level is signigant between all possible combinations of pathogens except deer tick virus
+
+plot(pain_by_site, plotrand = TRUE)
+
+obs.v.exp(pain_individuals)
+
+obs.v.exp(pain_by_site)
+
+pair(pain, spp = 4,all= TRUE)
+
+prob.table(pain)
+
+

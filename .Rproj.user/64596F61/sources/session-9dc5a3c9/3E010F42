@@ -1,0 +1,28 @@
+{
+    "id": "3E010F42",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1680873383608.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "id": "9fbc71ee44e440b5abcc45add2f30759",
+        "name": "Pathogen_for_occur_analysis_by_sites_presence",
+        "title": "Pathogen_for_occur_analysis_by_sites_presence",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 4607182418800017408,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1680873383608,
+    "read_only": false,
+    "read_only_alternatives": []
+}
